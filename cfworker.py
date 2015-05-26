@@ -4,12 +4,11 @@ from flask import Flask
 import threading
 
 class cfworker(threading.Thread):
-        def __init__(self):
+        def __init__(self, port):
                 threading.Thread.__init__(self)
                 self.start()
-                self.port = int( os.getenv("VCAP_APP_PORT") )
-                self.app = Flask(__name__)
-                self.app.run( host='0.0.0.0', port=self.port )
+       	        self.app = Flask(__name__)
+               	self.app.run( host='0.0.0.0', port=port )
 
         def run(self):
                 self.work()
