@@ -10,8 +10,9 @@ class cfworker(threading.Thread):
         def __init__(self, port=None, log=None):
                 threading.Thread.__init__(self)
 		self.port = port
-		if log:
-			logging.getLogger('werkzeug').setLevel(log)
+		self.log = log
+		if self.log:
+			logging.getLogger('werkzeug').setLevel(self.log)
 		self.start()
                	app.run( host='0.0.0.0', port=self.port )
 
