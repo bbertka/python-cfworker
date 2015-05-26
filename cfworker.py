@@ -1,20 +1,19 @@
 #!/usr/bin/python
+import os
+from flask import Flask
+import threading
 
-import os, threading
-import SimpleHTTPServer
-import SocketServer
-
-
-class cfworker(threading.Thread):
-        def __init__(self, port=None):
+class CFworker(threading.Thread):
+        def __init__(self):
                 threading.Thread.__init__(self)
-		if not port:
-			port = int( os.getenv("VCAP_APP_PORT") )
-                self.port = port
-		self.start()
+                self.start()
+                self.port = int( os.getenv("VCAP_APP_PORT") )
+                self.app = Flask(__name__)
+                self.app.run( host='0.0.0.0', port=self.port )
 
         def run(self):
-                Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-                httpd = SocketServer.TCPServer(("", self.port), Handler)
-                print "cfworker: serving at port: %s" % self.port
-                httpd.serve_forever()
+                self.work()
+
+        def work(self):
+                # implement this function in your own app    
+                pass

@@ -2,6 +2,6 @@
 
 from distutils.core import setup
 setup(name='cfworker',
-      version='1.0',
+      version='1.1',
       py_modules=['cfworker'],
       )
