@@ -18,6 +18,3 @@ class cfworker(threading.Thread):
                 httpd = SocketServer.TCPServer(("", self.port), Handler)
                 print "cfworker: serving at port: %s" % self.port
                 httpd.serve_forever()
-
-
-cfworker()
