@@ -3,7 +3,7 @@ import os
 from flask import Flask
 import threading
 
-class CFworker(threading.Thread):
+class cfworker(threading.Thread):
         def __init__(self):
                 threading.Thread.__init__(self)
                 self.start()
