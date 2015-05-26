@@ -7,11 +7,11 @@ import logging
 app = Flask(__name__)
 
 class cfworker(threading.Thread):
-        def __init__(self, port=None, logger=None):
+        def __init__(self, port=None, log=None):
                 threading.Thread.__init__(self)
 		self.port = port
-		if logger:
-			logging.getLogger('werkzeug').setLevel(logger)
+		if log:
+			logging.getLogger('werkzeug').setLevel(log)
 		self.start()
                	app.run( host='0.0.0.0', port=self.port )
 
