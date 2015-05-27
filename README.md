@@ -44,9 +44,9 @@ Note that by default the cfworker will run on CF App port set by the environment
 If you would like to run locally, just add the port parameter to the cfworker() 
 instance like so:
 
-'''
+```
 w = cfworker(port=8080)
-'''
+```
 
 If you would like different logging, import the logging module and set the log:
 
