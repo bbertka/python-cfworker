@@ -3,7 +3,7 @@ import cfworker
 import time
 
 
-cfworker()
+cfworker.cfworker()
 
 while True:
 	print 'working...'
