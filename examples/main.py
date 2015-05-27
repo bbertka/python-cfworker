@@ -4,9 +4,9 @@ import cfworker
 import time
 
 class cfworker(cfworker.cfworker):
-	""" cfworker.work must be overridden as shown here """
+	""" cfworker.run must be overridden as shown here """
 
-	def work(self):
+	def run(self):
 		while True:
                 	print "cfworker: Working..."
 			time.sleep(5)
