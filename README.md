@@ -19,7 +19,7 @@ To use within a CF app, check the examples folder
 Basically, the cfworker.work() function must be overridden with your app's
 work.
 
-'''
+<pre>
 
 import cfworker
 
@@ -36,7 +36,7 @@ if __name__=='__main__':
 
         w = cfworker()
 
-'''
+</pre>
 
 
 Note that by default the cfworker will run on CF App port set by the environment
@@ -50,13 +50,13 @@ w = cfworker(port=8080)
 
 If you would like different logging, import the logging module and set the log:
 
-'''
+<pre>
 import logging
 
 ...
 
 w = worker(log=logging.ERROR)
-'''
+</pre>
 
 
 license
