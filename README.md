@@ -5,13 +5,21 @@ This module makes it easier to deploy Python workers by wrapping Flask and Threa
 functionality into a single module. When instanced, your app will be serving http
 via Flask, as well as performing work. 
 
+https://pypi.python.org/pypi/python-cfworker
+
 To Use
 ================================================================================
 
-Checkout the repository and run the setup script
+To get the latest version, checkout the repository and run the setup script
 
 ```
 sudo python setup.py install
+```
+
+To install via pip:
+
+```
+pip install python-cfworker
 ```
 
 To use within a CF app, check the examples folder
