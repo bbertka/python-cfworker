@@ -27,7 +27,7 @@ import cfworker
 class cfworker(cfworker.cfworker):
 
         def work(self):
-		# override with your functionality
+	        # override with your functionality
                 while True:
                         print "cfworker: Working..."
 
