@@ -24,52 +24,25 @@ pip install python-cfworker
 
 To use within a CF app, check the examples folder
 
-Basically, the cfworker.run() function must be overridden with your app's
-work.
-
 <pre>
 
 import cfworker
 
-
-class cfworker(cfworker.cfworker):
-
-        def run(self):
-                # override with your functionality
-                while True:
-                        print "cfworker: Working..."
-
-
 if __name__=='__main__':
 
-        w = cfworker()
+        cfworker()
+
+	while True:
+		print 'working...'
 
 </pre>
 
 
-Note that by default the cfworker will run on CF App port set by the environment:
+Note that by default the cfworker will run on Flask port 5000 unless otherwise specified:
 
 ```
-VCAP_APP_PORT
-```
-
-If you would like to run locally, just add the port parameter to the cfworker() 
-instance like so:
-
-```
-w = cfworker(port=8080)
-```
-
-If you would like different logging, import the logging module and set the log:
-
-<pre>
-import logging
-
-...
-
-w = cfworker(log=logging.ERROR)
-</pre>
-
+cfworker(port=<port>)
+``` 
 
 license
 ================================================================================
