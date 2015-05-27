@@ -21,13 +21,11 @@ class cfworker(threading.Thread):
                	app.run( host='0.0.0.0', port=self.port )
 
         def run(self):
-                self.work()
-
-        def work(self):
                 # implement this function in your own app    
                 pass
 
 @app.route('/')
 def index():
-        return "Welcome to cfworker"
+	""" Routes are optional """
+        return "Hello cfworker!"
 
