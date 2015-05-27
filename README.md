@@ -39,7 +39,11 @@ if __name__=='__main__':
 </pre>
 
 
-Note that by default the cfworker will run on CF App port set by the environment
+Note that by default the cfworker will run on CF App port set by the environment:
+
+```
+VCAP_APP_PORT
+```
 
 If you would like to run locally, just add the port parameter to the cfworker() 
 instance like so:
