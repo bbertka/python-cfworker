@@ -1,5 +1,5 @@
 ---
 applications:
-- name: cfworker
+- name: cfworker-example
   buildpack: https://github.com/cloudfoundry/python-buildpack
   memory: 128M
