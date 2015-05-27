@@ -16,7 +16,7 @@ sudo python setup.py install
 
 To use within a CF app, check the examples folder
 
-Basically, the cfworker.work() function must be overridden with your app's
+Basically, the cfworker.run() function must be overridden with your app's
 work.
 
 <pre>
@@ -26,7 +26,7 @@ import cfworker
 
 class cfworker(cfworker.cfworker):
 
-        def work(self):
+        def run(self):
 	        # override with your functionality
                 while True:
                         print "cfworker: Working..."
@@ -59,7 +59,7 @@ import logging
 
 ...
 
-w = worker(log=logging.ERROR)
+w = cfworker(log=logging.ERROR)
 </pre>
 
 
