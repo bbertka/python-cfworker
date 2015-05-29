@@ -30,7 +30,7 @@ import cfworker
 
 if __name__=='__main__':
 
-        cfworker()
+        cfworker.cfworker()
 
 	while True:
 		print 'working...'
@@ -41,7 +41,7 @@ if __name__=='__main__':
 Note that by default the cfworker will run on Flask port 5000 unless otherwise specified:
 
 ```
-cfworker(port=<port>)
+cfworker.cfworker(port=<port>)
 ``` 
 
 license
