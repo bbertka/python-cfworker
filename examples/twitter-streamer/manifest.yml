@@ -1,0 +1,8 @@
+applications:
+- name: twitter-streamer
+  buildpack: https://github.com/cloudfoundry/python-buildpack
+  memory: 256M
+  domain: cfapps.io
+  stack: cflinuxfs2
+  instances: 1
+  host: twitter-streamer

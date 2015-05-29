@@ -1,4 +1,4 @@
-Python Worker on Cloud Foundry using Python-CFWorker Module
+Simple Python Worker on Cloud Foundry using Python-CFWorker Module
 ================================================================================
 
 This is a sample application showing how to deploy a simple Python worker
