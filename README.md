@@ -7,6 +7,11 @@ via Flask, as well as performing work.
 
 https://pypi.python.org/pypi/python-cfworker
 
+Recent Changes
+================================================================================
+1.3.1 - Added new CF worker example for streaming twitter data
+
+
 To Use
 ================================================================================
 
