@@ -8,12 +8,10 @@ to Cloud Foundry using the Twython (Twitter API) and CFWorker module
 To Deploy on Cloud Foundry
 ================================================================================
 
-Update the manifest.yml file name and host parameters for your app/env
-
 Set your environment variables for your cooresponding Twitter API Keys, the streamer
 reads these in at runtime.
 
-You can set via Shell env, or add code to the examplelike below:
+You can set via Shell env before execution, or add code to the example like below:
 ```
 os.environ['APP_KEY']='1dpfNZl3GIAfXqvz2lweknfo83nfwkf9'
 os.environ['APP_SECRET']='RemGJSEFdlc3jUC1UFBrILrroPq33jd74hnfkg85hdlsotcS'
@@ -27,6 +25,16 @@ as is for CF deployment
 ```
 cfworker.cfworker(port=<port>)
 ```
+
+Choose what to track on twitter
+
+```
+stream.statuses.filter(track='bigdata')
+```
+
+Update the manifest.yml file name and host parameters for your app/env
+
+Push to CF!
 
 ```
 cf push
