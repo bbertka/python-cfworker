@@ -5,7 +5,7 @@ This is a sample application showing how to deploy a simple Python worker
 using Cloud Foundry and the CFWorker module (Flask + Threading)
 
 
-To Deploy on Clouf Foundry
+To Deploy on Cloud Foundry
 ================================================================================
 
 Update the manifest.yml file name parameter to your app
