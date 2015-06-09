@@ -2,7 +2,7 @@
 
 from distutils.core import setup
 setup(name='python-cfworker',
-      version='1.3.1',
+      version='1.4.0',
       py_modules=['cfworker'],
       install_requires=[
         "Flask",
@@ -15,7 +15,7 @@ setup(name='python-cfworker',
       url = 'https://github.com/bbertka/python-cfworker',
       summary = 'CFWorker: A Module to simplify Worker App deployment',
       license = 'Apache',
-      description = 'This module makes it easier to deploy Python workers by wrapping Flask and Threading functionality into a single module. When instanced, your app will be serving http via Flask, as well as performing work.',
+      description = 'This module makes it easier to deploy Python workers by wrapping Flask and multiprocess functionality into a single module. When instanced, your app will be serving http via Flask, as well as performing work.',
       keywords = ['cloudfoundry', 'flask', 'worker', 'python'],
       classifiers = [],
 )
