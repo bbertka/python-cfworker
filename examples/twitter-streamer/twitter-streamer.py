@@ -18,7 +18,7 @@ if __name__=='__main__':
 	""" Leave this as is if deploying to CF, otherwise choose
 	a port for local deployment (e.g. 8080) """
 
-	cfworker.cfworker( port=int(os.getenv('VCAP_APP_PORT')) )
+	worker = cfworker.cfworker( port=int(os.getenv('VCAP_APP_PORT')) )
 
 	""" These variables can be set in your environment (ideal), or
 	hardcoded into the function call """
@@ -29,3 +29,6 @@ if __name__=='__main__':
 	""" You can also set an environment variable to choose what to track, or 
 	hard code a list here """
 	stream.statuses.filter(track='bigdata')
+
+	""" stops the HTTP server """
+	worker.stop()

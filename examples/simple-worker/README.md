@@ -2,7 +2,7 @@ Simple Python Worker on Cloud Foundry using Python-CFWorker Module
 ================================================================================
 
 This is a sample application showing how to deploy a simple Python worker
-using Cloud Foundry and the CFWorker module (Flask + Threading)
+using Cloud Foundry and the CFWorker module (Flask + Multiprocessing)
 
 
 To Deploy on Cloud Foundry
