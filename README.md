@@ -1,7 +1,7 @@
 Python-CFWorker: A Module to simplify Worker App deployment
 ================================================================================
 
-This module makes it easier to deploy Python workers by wrapping Flask and Threading
+This module makes it easier to deploy Python workers by wrapping Flask and multiprocessing
 functionality into a single module. When instanced, your app will be serving http
 via Flask, as well as performing work. 
 
@@ -9,6 +9,7 @@ https://pypi.python.org/pypi/python-cfworker
 
 Recent Changes
 ================================================================================
+1.4.0 - New implementation via multiprocessing.Process (added start, stop)
 1.3.1 - Added new CF worker example for streaming twitter data
 
 
@@ -35,10 +36,12 @@ import cfworker
 
 if __name__=='__main__':
 
-        cfworker.cfworker()
+	worker = cfworker.cfworker()
 
 	while True:
 		print 'working...'
+
+	worker.stop()
 
 </pre>
 
