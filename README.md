@@ -10,6 +10,7 @@ https://pypi.python.org/pypi/python-cfworker
 Recent Changes
 ================================================================================
 1.4.0 - New implementation via multiprocessing.Process (added start, stop)
+
 1.3.1 - Added new CF worker example for streaming twitter data
 
 
