@@ -2,11 +2,12 @@
 import cfworker
 import time
 
-
-cfworker.cfworker()
+worker = cfworker.cfworker()
+worker.start()
 
 while True:
 	print 'working...'
 	time.sleep(5)
 
+worker.stop()
 

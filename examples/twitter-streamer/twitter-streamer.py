@@ -19,6 +19,7 @@ if __name__=='__main__':
 	a port for local deployment (e.g. 8080) """
 
 	worker = cfworker.cfworker( port=int(os.getenv('VCAP_APP_PORT')) )
+	worker.start()
 
 	""" These variables can be set in your environment (ideal), or
 	hardcoded into the function call """

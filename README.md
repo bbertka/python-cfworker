@@ -9,6 +9,8 @@ https://pypi.python.org/pypi/python-cfworker
 
 Recent Changes
 ================================================================================
+1.4.1 - Removed auto-start from main class
+
 1.4.0 - New implementation via multiprocessing.Process (added start, stop)
 
 1.3.1 - Added new CF worker example for streaming twitter data
@@ -17,13 +19,13 @@ Recent Changes
 To Use
 ================================================================================
 
-To get the latest version, checkout the repository and run the setup script
+To get the latest version with new features, checkout the repository and run the setup script
 
 ```
 sudo python setup.py install
 ```
 
-To install via pip:
+To install a tested production version via pip:
 
 ```
 pip install python-cfworker
@@ -38,6 +40,8 @@ import cfworker
 if __name__=='__main__':
 
 	worker = cfworker.cfworker()
+
+	worker.start()
 
 	while True:
 		print 'working...'

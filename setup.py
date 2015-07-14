@@ -2,7 +2,7 @@
 
 from distutils.core import setup
 setup(name='python-cfworker',
-      version='1.4.0',
+      version='1.4.2',
       py_modules=['cfworker'],
       install_requires=[
         "Flask",
