@@ -9,6 +9,8 @@ https://pypi.python.org/pypi/python-cfworker
 
 Recent Changes
 ================================================================================
+1.5.0 - Fixed simple worker to use CF port
+
 1.4.1 - Removed auto-start from main class
 
 1.4.0 - New implementation via multiprocessing.Process (added start, stop)

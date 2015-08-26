@@ -2,7 +2,7 @@
 import cfworker
 import time
 
-worker = cfworker.cfworker()
+worker = cfworker.cfworker( port=int(os.getenv('VCAP_APP_PORT')) )
 worker.start()
 
 while True:
