@@ -18,7 +18,7 @@ if __name__=='__main__':
 	""" Leave this as is if deploying to CF, otherwise choose
 	a port for local deployment (e.g. 8080) """
 
-	worker = cfworker.cfworker( port=int(os.getenv('VCAP_APP_PORT')) )
+	worker = cfworker.cfworker()
 	worker.start()
 
 	""" These variables can be set in your environment (ideal), or

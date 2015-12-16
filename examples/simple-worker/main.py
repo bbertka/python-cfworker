@@ -1,13 +1,13 @@
 #!/usr/bin/python
 import cfworker
-import time
+import time, os
 
-worker = cfworker.cfworker( port=int(os.getenv('VCAP_APP_PORT')) )
+worker = cfworker.cfworker()
 worker.start()
 
 while True:
 	print 'working...'
-	time.sleep(5)
+	time.sleep(2)
 
 worker.stop()
 
