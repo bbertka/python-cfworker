@@ -9,6 +9,8 @@ https://pypi.python.org/pypi/python-cfworker
 
 Recent Changes
 ================================================================================
+1.7.0 - Fixed tab and spaces inconsistency for later versions of python
+
 1.6.0 - Now using CF Diego 'PORT' environment for HTTP port binding
 
 1.5.0 - Fixed simple worker to use CF port
